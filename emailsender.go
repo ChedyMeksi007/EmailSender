@@ -43,7 +43,7 @@ func getEmailAdresses() []string {
 	if err != nil {
 		log.Fatal(err)
 	}
-	return strings.Split(string(eAdrr1), "/n")
+	return strings.Split(string(eAdrr1), ";")
 }
 
 // reads the file name to read from from the command line and returns a byte slice containing the message to be sent
