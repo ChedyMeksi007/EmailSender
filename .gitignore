@@ -1,2 +1,4 @@
 #ignore all text files
 *.txt
+#ignore test.go
+test.go
