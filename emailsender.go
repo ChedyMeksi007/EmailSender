@@ -15,11 +15,11 @@ func main() {
 	to := getEmailAdresses()
 
 	// byte slice that containes the the content of the message to be sent
-	msg := getEmailContent()
-
-	//sender Data
-	from := "blinta.software@gmail.com"
-	password := "qfybmmhxulvisyjo"
+	Subject := []byte("Subject : test\r\n")
+	msg := append(Subject,getEmailContent()...)
+		//sender Data
+	from := "mekchedy7@gmail.com"
+	password := "cjohugbcoipxndbj"
 	host := "smtp.gmail.com"
 	auth := smtp.PlainAuth("", from, password, host)
 	err := smtp.SendMail("smtp.gmail.com:587", auth, from, to, msg)
