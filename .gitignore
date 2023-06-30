@@ -2,3 +2,5 @@
 *.txt
 #ignore test.go
 test.go
+#ignore executable
+emailsender
